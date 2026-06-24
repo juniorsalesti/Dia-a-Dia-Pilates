@@ -150,6 +150,7 @@ export default function App() {
 
   // Listen to scroll events
   useEffect(() => {
+    document.title = "Dia a Dia Pilates | Estúdio de Pilates Feminino em Campinas";
     const handleScroll = () => {
       setScrollY(window.scrollY);
       if (window.scrollY > 50) {
