@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Outfit", sans-serif;
+  
+  --color-sage-light: #EAEFE6;
+  --color-sage-bg: #F7F9F4;
+  --color-sage-medium: #8FA382;
+  --color-sage-dark: #4A5D43;
+  --color-gold: #C9B896;
+  --color-text-main: #2E3A28;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Animations and Transitions */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-element.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glassmorphism Navigation */
+.nav-glass {
+  background-color: rgba(234, 239, 230, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(143, 163, 130, 0.15);
+}
+
+.nav-transparent {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+}
+

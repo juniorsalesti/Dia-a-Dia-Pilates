@@ -1,0 +1,6 @@
+{
+  "name": "Dia a Dia Pilates",
+  "description": "Estúdio de Pilates exclusivo para mulheres em Campinas com atendimento clínico por fisioterapeutas com mais de 15 anos de experiência.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
