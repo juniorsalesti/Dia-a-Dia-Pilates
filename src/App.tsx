@@ -233,7 +233,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#EAEFE6] text-[#2E3A28] font-sans selection:bg-[#8FA382] selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#D7FAE5] text-[#2E3A28] font-sans selection:bg-[#8FA382] selection:text-white overflow-x-hidden">
       
       {/* --- NAVBAR --- */}
       <nav 
@@ -244,13 +244,13 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo Brand */}
-          <a href="#hero" onClick={(e) => scrollToSection(e, "hero")} className="flex flex-col items-start select-none group">
-            <span className="font-serif text-xl sm:text-2xl font-semibold tracking-wider text-[#4A5D43] transition-colors duration-300 group-hover:text-[#8FA382]">
-              Dia a Dia Pilates
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-[#C9B896] -mt-1">
-              Exclusivo para Mulheres
-            </span>
+          <a href="#hero" onClick={(e) => scrollToSection(e, "hero")} className="flex items-center select-none group py-1">
+            <img 
+              src="https://i.ibb.co/pGNB96R/dia-a-dia-1.png" 
+              alt="Dia a Dia Pilates" 
+              className="h-14 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
+              referrerPolicy="no-referrer"
+            />
           </a>
 
           {/* Desktop Navigation links */}
@@ -296,7 +296,7 @@ export default function App() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-[#EAEFE6] border-b border-[#8FA382]/15 px-6 pt-2 pb-8 space-y-4 shadow-md"
+              className="md:hidden bg-[#D7FAE5] border-b border-[#8FA382]/15 px-6 pt-2 pb-8 space-y-4 shadow-md"
             >
               <div className="flex flex-col pt-2">
                 <a 
@@ -367,8 +367,8 @@ export default function App() {
             alt="Mulher praticando Pilates com leveza" 
             className="w-full h-full object-cover object-center scale-105"
           />
-          {/* Subtle warm, calm sage green gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#EAEFE6]/95 via-[#EAEFE6]/85 to-[#EAEFE6]/40 md:from-[#EAEFE6]/98 md:via-[#EAEFE6]/80 md:to-[#EAEFE6]/30"></div>
+          {/* Subtle warm, calm mint green gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#D7FAE5]/95 via-[#D7FAE5]/85 to-[#D7FAE5]/40 md:from-[#D7FAE5]/98 md:via-[#D7FAE5]/80 md:to-[#D7FAE5]/30"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
@@ -445,7 +445,7 @@ export default function App() {
       {/* --- SOBRE O ESTÚDIO --- */}
       <section id="sobre" className="py-20 md:py-28 bg-[#FFFFFF] relative overflow-hidden">
         {/* Decorative subtle shape */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#EAEFE6]/40 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#D7FAE5]/40 rounded-full blur-3xl -mr-20 -mt-20"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -493,7 +493,7 @@ export default function App() {
               {/* 4 Pillars Highlight */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                 <div className="flex gap-3">
-                  <div className="bg-[#EAEFE6] text-[#4A5D43] p-2 rounded-full self-start">
+                  <div className="bg-[#D7FAE5] text-[#4A5D43] p-2 rounded-full self-start">
                     <Heart size={16} />
                   </div>
                   <div>
@@ -502,7 +502,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <div className="bg-[#EAEFE6] text-[#4A5D43] p-2 rounded-full self-start">
+                  <div className="bg-[#D7FAE5] text-[#4A5D43] p-2 rounded-full self-start">
                     <Award size={16} />
                   </div>
                   <div>
@@ -511,7 +511,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <div className="bg-[#EAEFE6] text-[#4A5D43] p-2 rounded-full self-start">
+                  <div className="bg-[#D7FAE5] text-[#4A5D43] p-2 rounded-full self-start">
                     <Sparkles size={16} />
                   </div>
                   <div>
@@ -520,7 +520,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <div className="bg-[#EAEFE6] text-[#4A5D43] p-2 rounded-full self-start">
+                  <div className="bg-[#D7FAE5] text-[#4A5D43] p-2 rounded-full self-start">
                     <Users size={16} />
                   </div>
                   <div>
@@ -533,7 +533,7 @@ export default function App() {
               {/* Dynamic Animated Stats Bar */}
               <div 
                 ref={countersRef}
-                className="flex justify-center p-4 sm:p-6 bg-[#EAEFE6]/50 rounded-2xl border border-[#8FA382]/10 mt-8"
+                className="flex justify-center p-4 sm:p-6 bg-[#D7FAE5]/50 rounded-2xl border border-[#8FA382]/10 mt-8"
               >
                 <div className="text-center">
                   <span className="block font-serif text-2xl sm:text-4xl font-bold text-[#4A5D43]">
@@ -552,7 +552,7 @@ export default function App() {
       </section>
 
       {/* --- SERVIÇOS / TERAPIAS --- */}
-      <section id="servicos" className="py-20 md:py-28 bg-[#F7F9F4] relative">
+      <section id="servicos" className="py-20 md:py-28 bg-[#D7FAE5]/40 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -572,8 +572,8 @@ export default function App() {
             
             {/* Service Card 1 */}
             <div className="bg-white rounded-2xl p-8 border border-[#8FA382]/10 shadow-xs hover:shadow-md transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#EAEFE6]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
-              <div className="bg-[#EAEFE6] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#D7FAE5]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
+              <div className="bg-[#D7FAE5] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
                 <Activity size={24} />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#4A5D43] mb-3 group-hover:text-[#8FA382] transition-colors duration-300">
@@ -590,8 +590,8 @@ export default function App() {
 
             {/* Service Card 2 */}
             <div className="bg-white rounded-2xl p-8 border border-[#8FA382]/10 shadow-xs hover:shadow-md transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#EAEFE6]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
-              <div className="bg-[#EAEFE6] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#D7FAE5]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
+              <div className="bg-[#D7FAE5] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
                 <Heart size={24} />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#4A5D43] mb-3 group-hover:text-[#8FA382] transition-colors duration-300">
@@ -608,8 +608,8 @@ export default function App() {
 
             {/* Service Card 3 */}
             <div className="bg-white rounded-2xl p-8 border border-[#8FA382]/10 shadow-xs hover:shadow-md transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#EAEFE6]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
-              <div className="bg-[#EAEFE6] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#D7FAE5]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
+              <div className="bg-[#D7FAE5] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
                 <Star size={24} />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#4A5D43] mb-3 group-hover:text-[#8FA382] transition-colors duration-300">
@@ -659,7 +659,7 @@ export default function App() {
           {/* Custom Interactive Carousel */}
           <div className="relative max-w-5xl mx-auto">
             {/* Main Stage Panel */}
-            <div className="bg-[#F7F9F4] rounded-3xl p-5 sm:p-8 border border-[#8FA382]/15 shadow-xs overflow-hidden">
+            <div className="bg-[#D7FAE5]/40 rounded-3xl p-5 sm:p-8 border border-[#8FA382]/15 shadow-xs overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 {/* Image Container with Arrow Controls */}
@@ -772,7 +772,7 @@ export default function App() {
       </section>
 
       {/* --- DEPOIMENTOS DE CLIENTES --- */}
-      <section id="depoimentos" className="py-20 md:py-28 bg-[#EAEFE6] relative">
+      <section id="depoimentos" className="py-20 md:py-28 bg-[#D7FAE5] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -792,8 +792,8 @@ export default function App() {
             
             {/* Depoimento 1 */}
             <div className="bg-white p-8 rounded-2xl border border-[#8FA382]/10 shadow-xs flex flex-col justify-between relative">
-              <div className="absolute top-6 right-8 text-[#EAEFE6] pointer-events-none">
-                <Quote size={48} className="opacity-40" />
+              <div className="absolute top-6 right-8 text-[#D7FAE5] pointer-events-none">
+                <Quote size={48} className="opacity-60" />
               </div>
               <div className="space-y-4">
                 <div className="flex text-[#C9B896] gap-0.5">
@@ -806,7 +806,7 @@ export default function App() {
                 </p>
               </div>
               <div className="mt-8 pt-4 border-t border-[#8FA382]/10 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#EAEFE6] text-[#4A5D43] flex items-center justify-center font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-[#D7FAE5] text-[#4A5D43] flex items-center justify-center font-bold text-sm">
                   LL
                 </div>
                 <div>
@@ -818,8 +818,8 @@ export default function App() {
 
             {/* Depoimento 2 */}
             <div className="bg-white p-8 rounded-2xl border border-[#8FA382]/10 shadow-xs flex flex-col justify-between relative">
-              <div className="absolute top-6 right-8 text-[#EAEFE6] pointer-events-none">
-                <Quote size={48} className="opacity-40" />
+              <div className="absolute top-6 right-8 text-[#D7FAE5] pointer-events-none">
+                <Quote size={48} className="opacity-60" />
               </div>
               <div className="space-y-4">
                 <div className="flex text-[#C9B896] gap-0.5">
@@ -832,7 +832,7 @@ export default function App() {
                 </p>
               </div>
               <div className="mt-8 pt-4 border-t border-[#8FA382]/10 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#EAEFE6] text-[#4A5D43] flex items-center justify-center font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-[#D7FAE5] text-[#4A5D43] flex items-center justify-center font-bold text-sm">
                   MB
                 </div>
                 <div>
@@ -844,8 +844,8 @@ export default function App() {
 
             {/* Depoimento 3 */}
             <div className="bg-white p-8 rounded-2xl border border-[#8FA382]/10 shadow-xs flex flex-col justify-between relative">
-              <div className="absolute top-6 right-8 text-[#EAEFE6] pointer-events-none">
-                <Quote size={48} className="opacity-40" />
+              <div className="absolute top-6 right-8 text-[#D7FAE5] pointer-events-none">
+                <Quote size={48} className="opacity-60" />
               </div>
               <div className="space-y-4">
                 <div className="flex text-[#C9B896] gap-0.5">
@@ -858,7 +858,7 @@ export default function App() {
                 </p>
               </div>
               <div className="mt-8 pt-4 border-t border-[#8FA382]/10 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#EAEFE6] text-[#4A5D43] flex items-center justify-center font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-[#D7FAE5] text-[#4A5D43] flex items-center justify-center font-bold text-sm">
                   LC
                 </div>
                 <div>
@@ -907,7 +907,7 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
             
             {/* UNIDADE I: Campos Elíseos */}
-            <div className="flex flex-col justify-between bg-[#F7F9F4] rounded-2xl p-5 sm:p-8 border border-[#8FA382]/15 shadow-xs hover:shadow-md transition-all duration-300 relative">
+            <div className="flex flex-col justify-between bg-[#D7FAE5]/25 rounded-2xl p-5 sm:p-8 border border-[#8FA382]/15 shadow-xs hover:shadow-md transition-all duration-300 relative">
               
               <div className="space-y-6">
                 <div>
@@ -944,7 +944,7 @@ export default function App() {
                 </div>
 
                 {/* Map integration using responsive styled frame */}
-                <div className="aspect-video w-full rounded-xl overflow-hidden border border-[#8FA382]/20 shadow-xs relative bg-[#EAEFE6]/50">
+                <div className="aspect-video w-full rounded-xl overflow-hidden border border-[#8FA382]/20 shadow-xs relative bg-[#D7FAE5]/50">
                   <iframe 
                     title="Mapa Jardim Campos Elíseos - Dia a Dia Pilates"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.074360305886!2d-47.09139882468897!3d-22.910626379250552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c7bb5e2f75ef%3A0x8f7d98305c4c207b!2sR.%20Conselheiro%20Ant%C3%B4nio%20Carlos%2C%201169%20-%20Jardim%20Campos%20El%C3%ADseos%2C%20Campinas%20-%20SP%2C%2013060-024!5e0!3m2!1spt-BR!2sbr!4v1719260000000!5m2!1spt-BR!2sbr"
@@ -970,7 +970,7 @@ export default function App() {
                 </a>
                 <button 
                   onClick={() => openScheduleModal("unidade1")}
-                  className="bg-[#FFFFFF] hover:bg-[#EAEFE6] border border-[#4A5D43]/20 text-[#4A5D43] py-3.5 px-6 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 text-center whitespace-nowrap"
+                  className="bg-[#FFFFFF] hover:bg-[#D7FAE5] border border-[#4A5D43]/20 text-[#4A5D43] py-3.5 px-6 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 text-center whitespace-nowrap"
                 >
                   AGENDAR AULA EXPERIMENTAL
                 </button>
@@ -978,7 +978,7 @@ export default function App() {
             </div>
 
             {/* UNIDADE II: Vila Proost de Souza */}
-            <div className="flex flex-col justify-between bg-[#F7F9F4] rounded-2xl p-5 sm:p-8 border border-[#8FA382]/15 shadow-xs hover:shadow-md transition-all duration-300 relative">
+            <div className="flex flex-col justify-between bg-[#D7FAE5]/25 rounded-2xl p-5 sm:p-8 border border-[#8FA382]/15 shadow-xs hover:shadow-md transition-all duration-300 relative">
               
               <div className="space-y-6">
                 <div>
@@ -1015,7 +1015,7 @@ export default function App() {
                 </div>
 
                 {/* Map integration using responsive styled frame */}
-                <div className="aspect-video w-full rounded-xl overflow-hidden border border-[#8FA382]/20 shadow-xs relative bg-[#EAEFE6]/50">
+                <div className="aspect-video w-full rounded-xl overflow-hidden border border-[#8FA382]/20 shadow-xs relative bg-[#D7FAE5]/50">
                   <iframe 
                     title="Mapa Vila Proost de Souza - Dia a Dia Pilates"
                     src="https://maps.google.com/maps?q=Av.%20Jos%C3%A9%20Pancetti%2C%20515%20-%20Vila%20Proost%20de%20Souza%2C%20Campinas%20-%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -1041,7 +1041,7 @@ export default function App() {
                 </a>
                 <button 
                   onClick={() => openScheduleModal("unidade2")}
-                  className="bg-[#FFFFFF] hover:bg-[#EAEFE6] border border-[#4A5D43]/20 text-[#4A5D43] py-3.5 px-6 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 text-center whitespace-nowrap"
+                  className="bg-[#FFFFFF] hover:bg-[#D7FAE5] border border-[#4A5D43]/20 text-[#4A5D43] py-3.5 px-6 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 text-center whitespace-nowrap"
                 >
                   AGENDAR AULA EXPERIMENTAL
                 </button>
@@ -1061,10 +1061,13 @@ export default function App() {
             
             {/* Branding Column */}
             <div className="md:col-span-5 space-y-4">
-              <span className="font-serif text-2xl sm:text-3xl font-semibold tracking-wider block text-white">
-                Dia a Dia Pilates
-              </span>
-              <p className="text-xs uppercase tracking-[0.3em] font-semibold text-[#C9B896]">
+              <img 
+                src="https://i.ibb.co/pGNB96R/dia-a-dia-1.png" 
+                alt="Dia a Dia Pilates" 
+                className="h-16 sm:h-24 w-auto object-contain brightness-0 invert"
+                referrerPolicy="no-referrer"
+              />
+              <p className="text-xs uppercase tracking-[0.3em] font-semibold text-[#C9B896] mt-2">
                 Exclusivo para Mulheres
               </p>
               <p className="text-sm text-[#EAEFE6]/80 font-light leading-relaxed max-w-sm">
@@ -1149,7 +1152,7 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setWhatsappFloatOpen(false)}
-                  className="flex items-center justify-between p-3 rounded-xl bg-[#F7F9F4] hover:bg-[#EAEFE6] border border-[#8FA382]/10 hover:border-[#8FA382]/30 transition-all group"
+                  className="flex items-center justify-between p-3 rounded-xl bg-[#D7FAE5]/25 hover:bg-[#D7FAE5] border border-[#8FA382]/10 hover:border-[#8FA382]/30 transition-all group"
                 >
                   <div>
                     <span className="text-xs font-semibold block text-[#4A5D43]">Unidade I</span>
@@ -1164,7 +1167,7 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setWhatsappFloatOpen(false)}
-                  className="flex items-center justify-between p-3 rounded-xl bg-[#F7F9F4] hover:bg-[#EAEFE6] border border-[#8FA382]/10 hover:border-[#8FA382]/30 transition-all group"
+                  className="flex items-center justify-between p-3 rounded-xl bg-[#D7FAE5]/25 hover:bg-[#D7FAE5] border border-[#8FA382]/10 hover:border-[#8FA382]/30 transition-all group"
                 >
                   <div>
                     <span className="text-xs font-semibold block text-[#4A5D43]">Unidade II</span>
@@ -1208,7 +1211,7 @@ export default function App() {
               <button 
                 id="close-modal-btn"
                 onClick={() => setIsUnitModalOpen(false)}
-                className="absolute top-4 right-4 text-[#2E3A28]/50 hover:text-[#2E3A28] p-1.5 rounded-full hover:bg-[#EAEFE6]"
+                className="absolute top-4 right-4 text-[#2E3A28]/50 hover:text-[#2E3A28] p-1.5 rounded-full hover:bg-[#D7FAE5]"
               >
                 <X size={20} />
               </button>
@@ -1222,7 +1225,7 @@ export default function App() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 
                 {/* Unit 1 Options */}
-                <div className="bg-[#F7F9F4] rounded-2xl p-5 border border-[#8FA382]/15 text-left flex flex-col justify-between">
+                <div className="bg-[#D7FAE5]/25 rounded-2xl p-5 border border-[#8FA382]/15 text-left flex flex-col justify-between">
                   <div>
                     <span className="text-[10px] font-bold text-[#8FA382] tracking-wider uppercase block mb-1">Unidade I</span>
                     <h4 className="font-serif text-lg font-semibold text-[#4A5D43] mb-1">Campos Elíseos</h4>
@@ -1246,7 +1249,7 @@ export default function App() {
                 </div>
 
                 {/* Unit 2 Options */}
-                <div className="bg-[#F7F9F4] rounded-2xl p-5 border border-[#8FA382]/15 text-left flex flex-col justify-between">
+                <div className="bg-[#D7FAE5]/25 rounded-2xl p-5 border border-[#8FA382]/15 text-left flex flex-col justify-between">
                   <div>
                     <span className="text-[10px] font-bold text-[#8FA382] tracking-wider uppercase block mb-1">Unidade II</span>
                     <h4 className="font-serif text-lg font-semibold text-[#4A5D43] mb-1">Vila Proost de Souza</h4>
