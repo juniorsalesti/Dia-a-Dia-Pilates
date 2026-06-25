@@ -37,7 +37,7 @@
 
 /* Glassmorphism Navigation */
 .nav-glass {
-  background-color: rgba(234, 239, 230, 0.75);
+  background-color: rgba(215, 250, 229, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(143, 163, 130, 0.15);

@@ -248,7 +248,7 @@ export default function App() {
             <img 
               src="https://i.ibb.co/pGNB96R/dia-a-dia-1.png" 
               alt="Dia a Dia Pilates" 
-              className="h-20 sm:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
+              className="h-24 sm:h-28 md:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
               referrerPolicy="no-referrer"
             />
           </a>
