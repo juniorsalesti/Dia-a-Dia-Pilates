@@ -1089,7 +1089,7 @@ export default function App() {
               <img 
                 src="https://i.ibb.co/pGNB96R/dia-a-dia-1.png" 
                 alt="Dia a Dia Pilates" 
-                className="h-16 sm:h-24 w-auto object-contain brightness-0 invert"
+                className="h-20 sm:h-28 w-auto object-contain"
                 referrerPolicy="no-referrer"
               />
               <p className="text-xs uppercase tracking-[0.3em] font-semibold text-[#C9B896] mt-2">
