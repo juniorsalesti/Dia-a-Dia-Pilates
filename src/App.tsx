@@ -583,8 +583,13 @@ export default function App() {
             {/* Service Card 1 */}
             <div className="bg-white rounded-2xl p-8 border border-[#8FA382]/10 shadow-xs hover:shadow-md transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#D7FAE5]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
-              <div className="bg-[#D7FAE5] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
-                <Activity size={24} />
+              <div className="w-full h-72 sm:h-80 md:h-[400px] rounded-xl overflow-hidden mb-6 border border-[#8FA382]/20 shadow-xs transition-transform duration-300 group-hover:scale-103">
+                <img 
+                  src="https://i.ibb.co/TFcZMGG/Whats-App-Image-2026-06-30-at-18-39-03.jpg" 
+                  alt="Pilates Solo & Aparelhos" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#4A5D43] mb-3 group-hover:text-[#8FA382] transition-colors duration-300">
                 Pilates Solo & Aparelhos
@@ -601,8 +606,13 @@ export default function App() {
             {/* Service Card 2 */}
             <div className="bg-white rounded-2xl p-8 border border-[#8FA382]/10 shadow-xs hover:shadow-md transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#D7FAE5]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
-              <div className="bg-[#D7FAE5] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
-                <Heart size={24} />
+              <div className="w-full h-72 sm:h-80 md:h-[400px] rounded-xl overflow-hidden mb-6 border border-[#8FA382]/20 shadow-xs transition-transform duration-300 group-hover:scale-103">
+                <img 
+                  src="https://i.ibb.co/fBsCxSs/Whats-App-Image-2026-06-30-at-21-11-22.jpg" 
+                  alt="Pilates para Gestantes" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#4A5D43] mb-3 group-hover:text-[#8FA382] transition-colors duration-300">
                 Pilates para Gestantes
@@ -619,8 +629,13 @@ export default function App() {
             {/* Service Card 3 */}
             <div className="bg-white rounded-2xl p-8 border border-[#8FA382]/10 shadow-xs hover:shadow-md transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#D7FAE5]/30 rounded-bl-full -tr-4 -mr-4 transition-all duration-500 group-hover:bg-[#8FA382]/10"></div>
-              <div className="bg-[#D7FAE5] text-[#4A5D43] w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-[#4A5D43] group-hover:text-white">
-                <Star size={24} />
+              <div className="w-full h-72 sm:h-80 md:h-[400px] rounded-xl overflow-hidden mb-6 border border-[#8FA382]/20 shadow-xs transition-transform duration-300 group-hover:scale-103">
+                <img 
+                  src="https://i.ibb.co/hJwBKV6p/Whats-App-Image-2026-06-30-at-20-41-07.jpg" 
+                  alt="Melhor Idade (60+)" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#4A5D43] mb-3 group-hover:text-[#8FA382] transition-colors duration-300">
                 Melhor Idade (60+)
