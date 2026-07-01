@@ -226,9 +226,9 @@ export default function App() {
   const getWhatsAppLink = (unit: "unidade1" | "unidade2") => {
     const baseUrl = "https://wa.me/5519982632658";
     if (unit === "unidade1") {
-      return `${baseUrl}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20na%20Unidade%20I%20(Jardim%20Campos%20El%C3%ADseos).`;
+      return `${baseUrl}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20avaliativa%20na%20Unidade%20I%20(Jardim%20Campos%20El%C3%ADseos).`;
     } else {
-      return `${baseUrl}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20na%20Unidade%20II%20(Jardim%20Aur%C3%A9lia).`;
+      return `${baseUrl}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20avaliativa%20na%20Unidade%20II%20(Jardim%20Aur%C3%A9lia).`;
     }
   };
 
@@ -270,7 +270,7 @@ export default function App() {
               className="bg-[#4A5D43] hover:bg-[#8FA382] text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 hover:scale-102 shadow-xs active:scale-98 flex items-center gap-2 whitespace-nowrap"
             >
               <Calendar size={14} className="text-[#C9B896]" />
-              AGENDAR AULA EXPERIMENTAL
+              AGENDAR AULA AVALIATIVA
             </button>
           </div>
 
@@ -345,7 +345,7 @@ export default function App() {
                 className="w-full bg-[#4A5D43] hover:bg-[#8FA382] text-white py-4 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 shadow-sm flex items-center justify-center gap-2 mt-4 whitespace-nowrap"
               >
                 <Calendar size={14} className="text-[#C9B896]" />
-                AGENDAR AULA EXPERIMENTAL
+                AGENDAR AULA AVALIATIVA
               </button>
             </motion.div>
           )}
@@ -362,10 +362,20 @@ export default function App() {
           className="absolute inset-0 z-0 transition-transform duration-100 ease-out"
           style={{ transform: `translateY(${scrollY * 0.12}px)` }}
         >
+          {/* Mobile Background Image (flipped horizontally for better framing) */}
+          <img 
+            src="https://i.ibb.co/8LxnQMG2/Whats-App-Image-2026-06-30-at-18-32-25.jpg" 
+            alt="Mulher praticando Pilates com leveza" 
+            className="block md:hidden w-full h-full object-cover object-center"
+            style={{ transform: "scaleX(-1.05) scaleY(1.05)" }}
+            referrerPolicy="no-referrer"
+          />
+          {/* Desktop Background Image */}
           <img 
             src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1920" 
             alt="Mulher praticando Pilates com leveza" 
-            className="w-full h-full object-cover object-center scale-105"
+            className="hidden md:block w-full h-full object-cover object-center scale-105"
+            referrerPolicy="no-referrer"
           />
           {/* Subtle warm, calm mint green gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#D7FAE5]/95 via-[#D7FAE5]/85 to-[#D7FAE5]/40 md:from-[#D7FAE5]/98 md:via-[#D7FAE5]/80 md:to-[#D7FAE5]/30"></div>
@@ -410,7 +420,7 @@ export default function App() {
                 onClick={() => openScheduleModal(null)}
                 className="bg-[#4A5D43] hover:bg-[#8FA382] text-white px-8 py-4 rounded-full text-sm font-semibold tracking-widest uppercase transition-all duration-300 shadow-md hover:scale-102 flex items-center justify-center gap-2 whitespace-nowrap"
               >
-                AGENDAR AULA EXPERIMENTAL
+                AGENDAR AULA AVALIATIVA
               </button>
               
               <a 
@@ -454,14 +464,14 @@ export default function App() {
             <div className="lg:col-span-5 space-y-6">
               <div className="relative rounded-2xl overflow-hidden aspect-4/5 shadow-lg group">
                 <img 
-                  src="https://i.ibb.co/3qL6LDZ/imagem-2026-06-24-162317220.png" 
+                  src="https://i.ibb.co/jvCFVBpt/Whats-App-Image-2026-06-30-at-18-34-05.jpg" 
                   alt="Estúdio de Pilates Dia a Dia" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-[#4A5D43]/10 mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 right-6 bg-[#FFFFFF]/90 backdrop-blur-xs p-5 rounded-xl border border-[#8FA382]/15">
-                  <span className="font-serif text-lg font-medium text-[#4A5D43] block">Atendimento Clínico</span>
-                  <span className="text-xs text-[#2E3A28]/80 leading-relaxed block mt-1">Nossas instrutoras possuem pós-graduação em fisioterapia ortopédica e postural.</span>
+                  <span className="font-serif text-lg font-medium text-[#4A5D43] block">Nossa Equipe</span>
+                  <span className="text-xs text-[#2E3A28]/80 leading-relaxed block mt-1">Todas as nossas instrutoras são fisioterapeutas.</span>
                 </div>
               </div>
             </div>
@@ -632,7 +642,7 @@ export default function App() {
               onClick={() => openScheduleModal(null)}
               className="inline-flex items-center gap-2 bg-[#4A5D43] hover:bg-[#8FA382] text-white px-8 py-3.5 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 shadow-sm hover:scale-102 whitespace-nowrap"
             >
-              AGENDAR AULA EXPERIMENTAL
+              AGENDAR AULA AVALIATIVA
             </button>
           </div>
 
@@ -879,7 +889,7 @@ export default function App() {
               onClick={() => openScheduleModal(null)}
               className="bg-[#4A5D43] hover:bg-[#8FA382] text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 whitespace-nowrap"
             >
-              AGENDAR AULA EXPERIMENTAL
+              AGENDAR AULA AVALIATIVA
             </button>
           </div>
 
@@ -972,7 +982,7 @@ export default function App() {
                   onClick={() => openScheduleModal("unidade1")}
                   className="bg-[#FFFFFF] hover:bg-[#D7FAE5] border border-[#4A5D43]/20 text-[#4A5D43] py-3.5 px-6 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 text-center whitespace-nowrap"
                 >
-                  AGENDAR AULA EXPERIMENTAL
+                  AGENDAR AULA AVALIATIVA
                 </button>
               </div>
             </div>
@@ -1043,7 +1053,7 @@ export default function App() {
                   onClick={() => openScheduleModal("unidade2")}
                   className="bg-[#FFFFFF] hover:bg-[#D7FAE5] border border-[#4A5D43]/20 text-[#4A5D43] py-3.5 px-6 rounded-full text-xs font-semibold tracking-widest uppercase transition-all duration-300 text-center whitespace-nowrap"
                 >
-                  AGENDAR AULA EXPERIMENTAL
+                  AGENDAR AULA AVALIATIVA
                 </button>
               </div>
             </div>
@@ -1217,7 +1227,7 @@ export default function App() {
               </button>
 
               <div className="mb-6">
-                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#C9B896] block mb-1">Agende sua Aula Experimental</span>
+                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#C9B896] block mb-1">Agende sua Aula Avaliativa</span>
                 <h3 className="font-serif text-2xl font-semibold text-[#4A5D43]">Escolha a unidade de sua preferência</h3>
                 <p className="text-sm text-[#2E3A28]/70 mt-1.5 max-w-md mx-auto">Temos duas localizações excelentes em Campinas com a mesma qualidade premium de atendimento clínico.</p>
               </div>
