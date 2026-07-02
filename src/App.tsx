@@ -434,9 +434,10 @@ export default function App() {
           />
           {/* Desktop Background Image */}
           <img 
-            src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1920" 
+            src="https://i.ibb.co/v4Dgdw04/Chat-GPT-Image-2-de-jul-de-2026-15-48-51.png" 
             alt="Mulher praticando Pilates com leveza" 
-            className="hidden md:block w-full h-full object-cover object-center scale-105"
+            className="hidden md:block w-full h-full object-cover"
+            style={{ transform: "scaleX(-1.05) scaleY(1.05)", objectPosition: "center 15%" }}
             referrerPolicy="no-referrer"
           />
           {/* Subtle warm, calm mint green gradient overlay */}
