@@ -57,46 +57,108 @@ export default function App() {
   const [scrollY, setScrollY] = useState(0);
 
   // Carousel State
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const galleryImages = [
+  const [activeUnitTab, setActiveUnitTab] = useState<"unidade1" | "unidade2">("unidade1");
+  const [currentSlide1, setCurrentSlide1] = useState(0);
+  const [currentSlide2, setCurrentSlide2] = useState(0);
+
+  const galleryImagesU1 = [
     {
       src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyihwrBkZ7QWWa_wBY0OLBuxNn_fpia-b_VjyMC7SxIlGb70M4xiBcjhvtwChxTdO1nfFmAHnpAcibq_dbq183xShQGnQc1FqJssEzrc1K3CalZlFo5a4dTVoJppJ0wZhK027FrgzM9szu=s680-w680-h510-rw",
-      tag: "Estrutura Premium",
+      tag: "Unidade I - Campos Elíseos",
       title: "Aparelhos de Pilates Modernos",
       desc: "Unidades equipadas com o que há de melhor no mercado para seu conforto, segurança e evolução postural."
     },
     {
       src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEKboOOH7xGRuLMMsRC-bDwmkR1zBD1pFJAnF4D1ulR7jkz-K06Obnnd4WN_AteYWBoZrP4HtHXIS-PCfnmQBfyUBJZ4pHJTnwQpU9AwkFykQGRQ7s-og1kcs1P9iyWXm7ECtPb67DD65IH=s680-w680-h510-rw",
-      tag: "Atendimento Clínico",
+      tag: "Unidade I - Campos Elíseos",
       title: "Pilates Clínico e Reabilitação",
       desc: "Aulas conduzidas por fisioterapeutas com olhar focado na sua saúde postural e alívio definitivo de dores."
     },
     {
       src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHPuzr9miWoLgl2IoqSh2JdYNnViol5uXIpmFo7Lbz90rDMWhh9yvPK7fooPVVMI4DNI01B2gXkXcvTsu3KPHuLhSGGPj2wQdOo2iG3kmgxzT96LUPLudsH_uXaXDjsvyk906USJPsZqY0=s680-w680-h510-rw",
-      tag: "Exclusivo para Mulheres",
+      tag: "Unidade I - Campos Elíseos",
       title: "Espaço Confortável e Acolhedor",
       desc: "Ambiente reservado, leve e climatizado, ideal para você se desconectar da rotina diária e focar em si mesma."
     },
     {
       src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFx5Evd330rpx_sL9khTWuvFbcnBfk1eAn2HrIkD7XxDUiGo-JaLrvLKMDMaalraKnEZn7N4gc746aMfciipVvl7B3QjLsSUsBHltWKjX59WvpuPTymsn57hQMv21RblVOsBGGHM5Epbyhy=s680-w680-h510-rw",
-      tag: "Saúde Integral",
+      tag: "Unidade I - Campos Elíseos",
       title: "Equilíbrio, Força e Flexibilidade",
       desc: "Aulas personalizadas e adaptadas para todas as idades, promovendo bem-estar físico e mental duradouro."
     },
     {
       src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHgShuTtXTSyjty1XG_wbkmgSIwk1W1iiHJ-NO6RW4NSzQ3yPfXyFz7WQv0GiOYzApATDu9N0ZtALQZltQQCs5chH_RXt9AARx_-mPxbu5pn7NXVvIkYu8CSUEF5LL3OHWc1Zwq0yjTHMTF=s680-w680-h510-rw",
-      tag: "Terapias Manuais",
+      tag: "Unidade I - Campos Elíseos",
       title: "Atendimento Individualizado",
       desc: "Integração de terapias manuais especializadas e ventosaterapia para acelerar sua recuperação física."
     }
   ];
 
+  const galleryImagesU2 = [
+    {
+      src: "https://i.ibb.co/v66vtVfH/a-1.jpg",
+      tag: "Unidade II - Jardim Aurélia",
+      title: "Recepção Elegante e Acolhedora",
+      desc: "Nosso espaço de entrada planejado nos mínimos detalhes para que você se sinta em casa desde o primeiro segundo."
+    },
+    {
+      src: "https://i.ibb.co/B78F7Rk/a-2.jpg",
+      tag: "Unidade II - Jardim Aurélia",
+      title: "Equipamentos de Última Geração",
+      desc: "Aparelhos premium de alta precisão que garantem a segurança e a eficácia de cada movimento guiado por fisioterapeutas."
+    },
+    {
+      src: "https://i.ibb.co/21C0SP56/a-3.jpg",
+      tag: "Unidade II - Jardim Aurélia",
+      title: "Salas Climatizadas e Amplas",
+      desc: "Espaço sofisticado, arejado, iluminado e extremamente higienizado para proporcionar uma experiência de prática impecável."
+    },
+    {
+      src: "https://i.ibb.co/qMqjkp7n/a-4.jpg",
+      tag: "Unidade II - Jardim Aurélia",
+      title: "Atendimento Clínico Diferenciado",
+      desc: "Toda a ergonomia e design voltados para proporcionar as melhores correções de postura e reabilitação."
+    },
+    {
+      src: "https://i.ibb.co/r230g02b/a-5.jpg",
+      tag: "Unidade II - Jardim Aurélia",
+      title: "Infraestrutura Completa",
+      desc: "Estúdio premium projetado especialmente para o bem-estar, a leveza e a saúde integral do público feminino."
+    }
+  ];
+
+  const getActiveGalleryData = () => {
+    if (activeUnitTab === "unidade1") {
+      return {
+        images: galleryImagesU1,
+        currentSlide: currentSlide1,
+        setCurrentSlide: setCurrentSlide1,
+        nextSlide: () => setCurrentSlide1((prev) => (prev + 1) % galleryImagesU1.length),
+        prevSlide: () => setCurrentSlide1((prev) => (prev - 1 + galleryImagesU1.length) % galleryImagesU1.length),
+      };
+    } else {
+      return {
+        images: galleryImagesU2,
+        currentSlide: currentSlide2,
+        setCurrentSlide: setCurrentSlide2,
+        nextSlide: () => setCurrentSlide2((prev) => (prev + 1) % galleryImagesU2.length),
+        prevSlide: () => setCurrentSlide2((prev) => (prev - 1 + galleryImagesU2.length) % galleryImagesU2.length),
+      };
+    }
+  };
+
+  const { 
+    images: activeImages, 
+    currentSlide: activeSlide, 
+    setCurrentSlide: setActiveSlide 
+  } = getActiveGalleryData();
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
+    getActiveGalleryData().nextSlide();
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+    getActiveGalleryData().prevSlide();
   };
 
   // Mobile swipe gesture support for the carousel
@@ -668,7 +730,7 @@ export default function App() {
       <section id="galeria" className="py-20 md:py-28 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+          <div className="text-center max-w-2xl mx-auto mb-10 space-y-4">
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#C9B896] block">
               Nosso Espaço Acolhedor
             </span>
@@ -679,6 +741,32 @@ export default function App() {
             <p className="text-base text-[#2E3A28]/80 font-light leading-relaxed">
               Estúdios equipados com as melhores tecnologias de Pilates do mercado, iluminados, amplos e extremamente organizados para garantir a melhor prática possível.
             </p>
+          </div>
+
+          {/* Unit Selector Tab Switcher */}
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex p-1 bg-[#D7FAE5]/60 backdrop-blur-xs rounded-full border border-[#8FA382]/15">
+              <button
+                onClick={() => setActiveUnitTab("unidade1")}
+                className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 ${
+                  activeUnitTab === "unidade1"
+                    ? "bg-[#4A5D43] text-white shadow-xs"
+                    : "text-[#4A5D43]/80 hover:text-[#4A5D43]"
+                }`}
+              >
+                UNIDADE I (Campos Elíseos)
+              </button>
+              <button
+                onClick={() => setActiveUnitTab("unidade2")}
+                className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 ${
+                  activeUnitTab === "unidade2"
+                    ? "bg-[#4A5D43] text-white shadow-xs"
+                    : "text-[#4A5D43]/80 hover:text-[#4A5D43]"
+                }`}
+              >
+                UNIDADE II (Jardim Aurélia)
+              </button>
+            </div>
           </div>
 
           {/* Custom Interactive Carousel */}
@@ -696,9 +784,9 @@ export default function App() {
                 >
                   <AnimatePresence mode="wait">
                     <motion.img
-                      key={currentSlide}
-                      src={galleryImages[currentSlide].src}
-                      alt={galleryImages[currentSlide].title}
+                      key={`${activeUnitTab}-${activeSlide}`}
+                      src={activeImages[activeSlide].src}
+                      alt={activeImages[activeSlide].title}
                       initial={{ opacity: 0, scale: 1.02 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.98 }}
@@ -730,14 +818,14 @@ export default function App() {
                 <div className="lg:col-span-5 space-y-4 text-center lg:text-left flex flex-col justify-between h-full min-h-[220px]">
                   <div className="space-y-3">
                     <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#C9B896] block">
-                      {galleryImages[currentSlide].tag}
+                      {activeImages[activeSlide].tag}
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#4A5D43] leading-tight">
-                      {galleryImages[currentSlide].title}
+                      {activeImages[activeSlide].title}
                     </h3>
                     <div className="h-0.5 w-12 bg-[#C9B896] mx-auto lg:mx-0 rounded-full"></div>
                     <p className="text-sm sm:text-base text-[#2E3A28]/85 font-light leading-relaxed">
-                      {galleryImages[currentSlide].desc}
+                      {activeImages[activeSlide].desc}
                     </p>
                   </div>
 
@@ -745,12 +833,12 @@ export default function App() {
                   <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#8FA382]/10 mt-auto">
                     {/* Dots */}
                     <div className="flex gap-2.5">
-                      {galleryImages.map((_, idx) => (
+                      {activeImages.map((_, idx) => (
                         <button
                           key={idx}
-                          onClick={() => setCurrentSlide(idx)}
+                          onClick={() => setActiveSlide(idx)}
                           className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                            idx === currentSlide 
+                            idx === activeSlide 
                               ? "bg-[#4A5D43] w-6" 
                               : "bg-[#8FA382]/35 hover:bg-[#8FA382]/65"
                           }`}
@@ -761,7 +849,7 @@ export default function App() {
 
                     {/* Numeric tracking */}
                     <span className="text-xs font-mono text-[#2E3A28]/70 tracking-wider">
-                      0{currentSlide + 1} / 0{galleryImages.length}
+                      0{activeSlide + 1} / 0{activeImages.length}
                     </span>
                   </div>
                 </div>
@@ -771,12 +859,12 @@ export default function App() {
 
             {/* Thumbnail Row Below Carousel (Desktop/Tablet helper) */}
             <div className="hidden sm:flex justify-center gap-4 mt-8">
-              {galleryImages.map((img, idx) => (
+              {activeImages.map((img, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setCurrentSlide(idx)}
+                  onClick={() => setActiveSlide(idx)}
                   className={`relative rounded-xl overflow-hidden aspect-[4/3] w-24 border-2 transition-all duration-300 ${
-                    idx === currentSlide 
+                    idx === activeSlide 
                       ? "border-[#4A5D43] scale-105 shadow-md" 
                       : "border-transparent opacity-60 hover:opacity-100"
                   }`}
